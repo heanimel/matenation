@@ -61,8 +61,8 @@ export function ModernPartners() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, type: "spring" }}
             >
-              <div className="rounded-2xl overflow-hidden w-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 p-1 shadow-2xl hover:shadow-pink-500/50 transition-shadow duration-300">
-                <div className="bg-gray-900/95 rounded-xl p-8 flex flex-col items-center justify-center" style={{ aspectRatio: '4 / 3', maxWidth: 420 }}>
+              <div className="rounded-2xl overflow-hidden w-full max-w-md mx-auto bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 p-1 shadow-2xl hover:shadow-pink-500/50 transition-shadow duration-300">
+                <div className="bg-gray-900/95 rounded-xl p-6 flex flex-col items-center justify-center">
                   {/* Illustration: Artists Collaborating & Listeners Enjoying */}
                   <svg className="w-48 h-32 mb-4" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
                     {/* Artist 1 with headphones */}

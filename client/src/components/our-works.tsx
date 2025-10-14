@@ -4,16 +4,12 @@ import { Play } from "lucide-react";
 export function OurWorks() {
   const videos = [
     { 
-      id: "dQw4w9WgXcQ", // Placeholder - replace with actual video IDs
-      title: "Latest Release"
+      id: "U4UEiR0mcvI",
+      title: "Latest Music Video"
     },
     { 
-      id: "dQw4w9WgXcQ", // Placeholder - replace with actual video IDs
-      title: "Music Video"
-    },
-    { 
-      id: "dQw4w9WgXcQ", // Placeholder - replace with actual video IDs
-      title: "Behind the Scenes"
+      id: "hzkbtHorOMw",
+      title: "Recent Release"
     }
   ];
 
@@ -35,7 +31,7 @@ export function OurWorks() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {videos.map((video, index) => (
             <motion.div
               key={index}
