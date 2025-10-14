@@ -5,11 +5,11 @@ export function OurWorks() {
   const videos = [
     { 
       id: "U4UEiR0mcvI",
-      title: "Latest Music Video"
+      title: "Music Video"
     },
     { 
       id: "hzkbtHorOMw",
-      title: "Recent Release"
+      title: "Music Video"
     }
   ];
 
