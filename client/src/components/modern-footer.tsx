@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Instagram, Twitter, Youtube, MessageCircle } from "lucide-react";
-import { SiTiktok, SiDiscord } from "react-icons/si";
+import { Instagram, Youtube } from "lucide-react";
+import { SiBluesky, SiFacebook, SiX } from "react-icons/si";
 
 export function ModernFooter() {
   const navigationLinks = [
     { label: "Home", href: "#" },
-    { label: "About us", href: "#about" },
+    { label: "For Artists", href: "#for-artists" },
     { label: "Team", href: "#team" },
     { label: "Contact", href: "#contact" }
   ];
@@ -18,12 +18,11 @@ export function ModernFooter() {
   ];
 
   const socialLinks = [
-    { icon: SiDiscord, label: "Discord", href: "#" },
-    { icon: SiTiktok, label: "TikTok", href: "#" },
-    { icon: Instagram, label: "Instagram", href: "#" },
-    { icon: Twitter, label: "Twitter", href: "#" },
-    { icon: Youtube, label: "Youtube", href: "#" },
-    { icon: MessageCircle, label: "Threads", href: "#" }
+    { icon: Instagram, label: "Instagram", href: "https://instagram.com/matenations" },
+    { icon: SiX, label: "X", href: "https://x.com/matenations" },
+    { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@mateexclusives" },
+    { icon: SiFacebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61580036896615" },
+    { icon: SiBluesky, label: "Bluesky", href: "https://bsky.app/profile/matenations.bsky.social" }
   ];
 
   return (
