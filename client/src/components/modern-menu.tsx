@@ -7,7 +7,7 @@ export function ModernMenu() {
 
   const menuItems = [
     { label: "Home", href: "#" },
-    { label: "About", href: "#about" },
+    { label: "For Artists", href: "#for-artists" },
     { label: "Team", href: "#team" },
     { label: "Contact", href: "#contact" }
   ];
