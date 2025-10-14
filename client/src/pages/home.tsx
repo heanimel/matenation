@@ -4,6 +4,8 @@ import { ModernAbout } from "@/components/modern-about";
 import { ModernPartners } from "@/components/modern-partners";
 import { ModernAmbassadors } from "@/components/modern-ambassadors";
 import { ModernTeam } from "@/components/modern-team";
+import { MateSearch } from "@/components/mate-search";
+import { OurWorks } from "@/components/our-works";
 import { ModernContact } from "@/components/modern-contact";
 import { ModernFooter } from "@/components/modern-footer";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -31,6 +33,8 @@ export default function Home() {
           <ModernPartners />
           <ModernAmbassadors />
           <ModernTeam />
+          <MateSearch />
+          <OurWorks />
           <div className="flex flex-col min-h-screen">
             <div className="flex-1">
               <ModernContact />
