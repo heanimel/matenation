@@ -43,13 +43,21 @@ export function ModernAbout() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index) => (
             <ModernCard key={index} delay={index * 0.1} gradient="bg-gradient-to-br from-pink-600/30 to-purple-800/20">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-500/30 rounded-2xl mb-4 border border-pink-400/30">
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="inline-flex items-center justify-center w-16 h-16 bg-pink-500/30 rounded-2xl mb-4 border border-pink-400/30"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <feature.icon className="w-8 h-8 text-pink-300" />
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-medium text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
-              </div>
+              </motion.div>
             </ModernCard>
           ))}
         </div>

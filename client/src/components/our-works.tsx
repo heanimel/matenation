@@ -23,12 +23,23 @@ export function OurWorks() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Play className="w-8 h-8 text-pink-400" />
+            <motion.div
+              animate={{ scale: [1, 1.2, 1], rotate: [0, 360, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Play className="w-8 h-8 text-pink-400" />
+            </motion.div>
             <h2 className="text-4xl md:text-5xl font-light text-white">Our Works</h2>
           </div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <motion.p 
+            className="text-gray-300 text-lg max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
             Check out our latest music videos and releases
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -41,7 +52,11 @@ export function OurWorks() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-gray-500/20 backdrop-blur-xl rounded-2xl overflow-hidden border border-gray-400/20 shadow-xl hover:shadow-2xl transition-all hover:border-pink-400/30">
+              <motion.div 
+                className="bg-gray-500/20 backdrop-blur-xl rounded-2xl overflow-hidden border border-gray-400/20 shadow-xl hover:shadow-2xl transition-all hover:border-pink-400/30"
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="relative aspect-video">
                   <iframe
                     src={`https://www.youtube.com/embed/${video.id}`}
@@ -54,7 +69,7 @@ export function OurWorks() {
                 <div className="p-4">
                   <h3 className="text-white font-medium text-center">{video.title}</h3>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

@@ -26,25 +26,53 @@ export function MateSearch() {
             className="w-full max-w-5xl"
           >
             <div className="relative bg-gradient-to-br from-purple-900/40 to-indigo-900/40 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-400/30 shadow-2xl overflow-hidden">
-              {/* Decorative music notes */}
-              <div className="absolute top-6 left-6 opacity-20">
+              {/* Decorative music notes with floating animations */}
+              <motion.div 
+                className="absolute top-6 left-6 opacity-20"
+                animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
                 <Music2 className="w-12 h-12 text-purple-300" />
-              </div>
-              <div className="absolute bottom-6 right-6 opacity-20">
+              </motion.div>
+              <motion.div 
+                className="absolute bottom-6 right-6 opacity-20"
+                animate={{ y: [0, -20, 0], rotate: [0, -10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              >
                 <Music2 className="w-16 h-16 text-purple-300" />
-              </div>
-              <div className="absolute top-20 right-20 opacity-10">
+              </motion.div>
+              <motion.div 
+                className="absolute top-20 right-20 opacity-10"
+                animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              >
                 <Music2 className="w-10 h-10 text-purple-300" />
-              </div>
+              </motion.div>
 
               <div className="relative z-10">
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <Search className="w-8 h-8 text-purple-300" />
+                <motion.div 
+                  className="flex items-center justify-center gap-3 mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <motion.div
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Search className="w-8 h-8 text-purple-300" />
+                  </motion.div>
                   <h3 className="text-3xl md:text-4xl font-light text-white">
                     Discover Music with AI
                   </h3>
-                  <Sparkles className="w-8 h-8 text-purple-300" />
-                </div>
+                  <motion.div
+                    animate={{ rotate: [0, 15, 0], scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  >
+                    <Sparkles className="w-8 h-8 text-purple-300" />
+                  </motion.div>
+                </motion.div>
 
                 <p className="text-gray-200 text-lg mb-6 leading-relaxed text-center max-w-3xl mx-auto">
                   Mate Search is revolutionizing music discovery with AI technology, breaking free from monopolies like Spotify. Our intelligent search engine helps listeners, artists, and A&R professionals find extensive new and accurate songs, making music discovery more accessible and fair for everyone in the industry.
