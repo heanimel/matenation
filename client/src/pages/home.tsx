@@ -1,6 +1,5 @@
 import { ModernHero } from "@/components/modern-hero";
 import { ModernMenu } from "@/components/modern-menu";
-import { ModernGenres } from "@/components/modern-genres";
 import { ModernAbout } from "@/components/modern-about";
 import { ModernPartners } from "@/components/modern-partners";
 import { ModernAmbassadors } from "@/components/modern-ambassadors";
@@ -26,8 +25,7 @@ export default function Home() {
 
         <SlidingSections>
           <ModernHero />
-          <ModernGenres />
-          <div id="about">
+          <div id="for-artists">
             <ModernAbout />
           </div>
           <ModernPartners />
