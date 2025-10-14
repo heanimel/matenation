@@ -4,6 +4,15 @@ Mate Nation is a music society web application focused on discovering and promot
 
 ## Recent Changes (October 2025)
 
+### Content Restructuring & New Features (October 14, 2025)
+Major content reorganization and new sections added:
+- **Section Merge**: Merged "For Artists" content into "About Mate Nation" section and renamed entire section to "For Artists"
+- **Navigation Update**: Updated all navigation links from "About" to "For Artists" with new anchor #for-artists
+- **Mate Search Section**: Added new section showcasing Mate Search AI music search engine with purple gradient design, music note decorations, and benefits for listeners, artists, and A&R professionals
+- **Our Works Section**: Added YouTube video embed section displaying latest releases and music videos with link to full YouTube channel
+- **Social Links Update**: Updated footer with new social media links (Bluesky, YouTube, Facebook, X, Instagram)
+- **Cloudflare Pages**: Fixed deployment configuration with _redirects file for proper SPA routing and updated wrangler.toml
+
 ### Visual & UX Enhancements (October 13, 2025)
 Implemented 12 key improvements based on user requirements:
 - **Shadow Removal**: Removed bubble-glow shadow effects from Artist Showcase section for cleaner visual design
