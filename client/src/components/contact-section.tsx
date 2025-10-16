@@ -160,11 +160,11 @@ export function ContactSection() {
               <div className="mt-8 pt-8 border-t border-border">
                 <p className="text-muted-foreground">Or reach us directly at:</p>
                 <a 
-                  href="mailto:matenations@gmail.com" 
+                  href="mailto:info@matenation.org" 
                   className="text-primary hover:underline font-medium"
                   data-testid="link-email"
                 >
-                  matenations@gmail.com
+                  info@matenation.org
                 </a>
               </div>
             </CardContent>

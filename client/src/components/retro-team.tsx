@@ -36,7 +36,7 @@ const allTeam: TeamMember[] = [
   { name: "Stefflen", role: "Head of Digital Art", description: "Visual identity leader" },
   { name: "Soumyadeep", role: "Head of Video", description: "Video production maestro" },
   { name: "Peter", role: "Release Coordinator", description: "Distribution management" },
-  { name: "Prajit", role: "Strategist", description: "Market strategy expert" },
+  { name: "Pranjit", role: "Strategist", description: "Market strategy expert" },
   { name: "Utsav", role: "Manager", description: "Operations coordinator" },
 ];
 
@@ -90,8 +90,8 @@ export function RetroTeam() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ 
                   delay: index * 0.15, 
-                  duration: 0.8,
-                  ease: [0.22, 1, 0.36, 1]
+                  duration: 1.8,
+                  ease: [0.16, 1, 0.3, 1]
                 }}
                 whileHover={{ 
                   scale: 1.05,

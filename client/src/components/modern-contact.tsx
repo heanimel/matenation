@@ -155,10 +155,10 @@ export function ModernContact() {
           <div className="mt-8 pt-8 border-t border-white/20 text-center">
             <p className="text-gray-400">Or reach us directly at:</p>
             <a 
-              href="mailto:matenations@gmail.com" 
+              href="mailto:info@matenation.org" 
               className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
             >
-              matenations@gmail.com
+              info@matenation.org
             </a>
           </div>
         </ModernCard>

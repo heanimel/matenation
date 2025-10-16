@@ -59,7 +59,7 @@ const team: TeamMember[] = [
   { name: "Stefflen", role: "Head of Digital Art", description: "Visual identity leader", gradient: gradients[5] },
   { name: "Soumyadeep", role: "Head of Video", description: "Video production maestro", gradient: gradients[6] },
   { name: "Peter", role: "Release Coordinator", description: "Distribution management", gradient: gradients[7] },
-  { name: "Prajit", role: "Strategist", description: "Market strategy expert", gradient: gradients[8] },
+  { name: "Pranjit", role: "Strategist", description: "Market strategy expert", gradient: gradients[8] },
   { name: "Utsav", role: "Manager", description: "Operations coordinator", gradient: gradients[9] },
 ];
 

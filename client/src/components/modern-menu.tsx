@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Youtube } from "lucide-react";
+import { SiBluesky, SiFacebook, SiX } from "react-icons/si";
 
 export function ModernMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,17 @@ export function ModernMenu() {
     { label: "Home", href: "#" },
     { label: "For Artists", href: "#for-artists" },
     { label: "Team", href: "#team" },
+    { label: "Mate Search", href: "#mate-search" },
+    { label: "Our Works", href: "#our-works" },
     { label: "Contact", href: "#contact" }
+  ];
+
+  const socialLinks = [
+    { icon: Instagram, label: "Instagram", href: "https://instagram.com/matenations" },
+    { icon: SiX, label: "X", href: "https://x.com/matenations" },
+    { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@mateexclusives" },
+    { icon: SiFacebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61580036896615" },
+    { icon: SiBluesky, label: "Bluesky", href: "https://bsky.app/profile/matenations.bsky.social" }
   ];
 
   return (
@@ -41,8 +52,8 @@ export function ModernMenu() {
               className="absolute left-0 top-0 h-full w-80 bg-[#1a1d3d]/95 backdrop-blur-2xl border-r border-white/10 p-8 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="mt-20">
-                <nav className="space-y-4">
+              <div className="mt-20 flex flex-col h-[calc(100%-5rem)]">
+                <nav className="space-y-4 flex-1">
                   {menuItems.map((item, index) => (
                     <motion.a
                       key={index}
@@ -57,6 +68,51 @@ export function ModernMenu() {
                     </motion.a>
                   ))}
                 </nav>
+
+                {/* Submit Demo Button */}
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                  className="mt-6"
+                >
+                  <a
+                    href="#contact"
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-center py-4 rounded-full font-semibold shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all transform hover:scale-105"
+                  >
+                    Submit Demo
+                  </a>
+                </motion.div>
+
+                {/* Social Links */}
+                <motion.div 
+                  className="border-t border-white/10 pt-6 mt-6"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.7 }}
+                >
+                  <p className="text-white/70 text-sm mb-4">Follow us</p>
+                  <div className="flex gap-3">
+                    {socialLinks.map((social, index) => (
+                      <motion.a
+                        key={index}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ delay: 0.8 + index * 0.1 }}
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-white/10 backdrop-blur-xl p-3 rounded-full border border-white/20 hover:bg-pink-500/20 hover:border-pink-400/40 transition-all group"
+                        aria-label={social.label}
+                      >
+                        <social.icon className="w-5 h-5 text-white group-hover:text-pink-400 transition-colors" />
+                      </motion.a>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>

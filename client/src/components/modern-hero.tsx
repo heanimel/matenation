@@ -3,7 +3,7 @@ import { TypingEffect } from "./typing-effect";
 import { useTheme } from "../contexts/theme-context";
 import cloudImage from "@assets/6705b4a36def1cf003c24d10_Property 1=Day, Property 2=Cloud 3_1760332010666.png";
 
-const particles = Array.from({ length: 30 }, (_, i) => ({
+const particles = Array.from({ length: 15 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
   y: Math.random() * 100,
@@ -28,6 +28,7 @@ export function ModernHero() {
             top: `${particle.y}%`,
             width: `${particle.size}px`,
             height: `${particle.size}px`,
+            willChange: 'opacity, transform',
           }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ 
@@ -103,7 +104,7 @@ export function ModernHero() {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-light mb-6 text-white">
+          <h2 className="text-xl md:text-2xl font-light mb-6 text-white">
             Hello! We are
           </h2>
           

@@ -14,7 +14,7 @@ export function OurWorks() {
   ];
 
   return (
-    <section className="py-20 px-6 relative z-10">
+    <section id="our-works" className="py-20 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,8 +24,8 @@ export function OurWorks() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <motion.div
-              animate={{ scale: [1, 1.2, 1], rotate: [0, 360, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ scale: [1, 1.2, 1, 1, 1], rotate: [0, 360, 360, 360, 360] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", times: [0, 0.4, 0.5, 0.8, 1] }}
             >
               <Play className="w-8 h-8 text-pink-400" />
             </motion.div>

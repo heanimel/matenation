@@ -3,7 +3,7 @@ import { Music2, Search, Sparkles } from "lucide-react";
 
 export function MateSearch() {
   return (
-    <section className="py-20 px-6 relative z-10">
+    <section id="mate-search" className="py-20 px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,25 +26,28 @@ export function MateSearch() {
             className="w-full max-w-5xl"
           >
             <div className="relative bg-gradient-to-br from-purple-900/40 to-indigo-900/40 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-400/30 shadow-2xl overflow-hidden">
-              {/* Decorative music notes with floating animations */}
+              {/* Decorative music notes with floating animations - hidden on mobile for performance */}
               <motion.div 
-                className="absolute top-6 left-6 opacity-20"
+                className="hidden md:block absolute top-6 left-6 opacity-20"
                 animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                style={{ willChange: 'transform' }}
               >
                 <Music2 className="w-12 h-12 text-purple-300" />
               </motion.div>
               <motion.div 
-                className="absolute bottom-6 right-6 opacity-20"
+                className="hidden md:block absolute bottom-6 right-6 opacity-20"
                 animate={{ y: [0, -20, 0], rotate: [0, -10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                style={{ willChange: 'transform' }}
               >
                 <Music2 className="w-16 h-16 text-purple-300" />
               </motion.div>
               <motion.div 
-                className="absolute top-20 right-20 opacity-10"
+                className="hidden md:block absolute top-20 right-20 opacity-10"
                 animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                style={{ willChange: 'transform' }}
               >
                 <Music2 className="w-10 h-10 text-purple-300" />
               </motion.div>
@@ -115,7 +118,7 @@ export function MateSearch() {
                   transition={{ delay: 0.4 }}
                 >
                   <motion.a
-                    href="https://matesearch.org"
+                    href="https://search.matenation.org"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05, y: -2 }}
